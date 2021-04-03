@@ -1,0 +1,27 @@
+
+<web-app>
+    <servlet>
+        <servlet-name>first</servlet-name>
+        <servlet-class>com.bank.RegisterServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>first</servlet-name>
+        <url-pattern>/register</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>second</servlet-name>
+        <servlet-class>com.bank.LoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>second</servlet-name>
+        <url-pattern>/login</url-pattern>
+    </servlet-mapping>
+    <servlet>
+    <servlet-name>third</servlet-name>
+        <servlet-class>com.bank.CashServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>third</servlet-name>
+        <url-pattern>/cash</url-pattern>
+    </servlet-mapping>
+</web-app>

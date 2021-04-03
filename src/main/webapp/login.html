@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Example of Basic form Validation</title>
+<script>
+    function check() {
+        if(document.getElementById('name').value == "")
+        {
+            alert("Name is mandatory");
+            document.getElementById('name').style.borderColor="red";
+            return false;
+        }
+        if(document.getElementById('password').value == "")
+        {
+            alert("Password is mandatory");
+            document.getElementById('password').style.borderColor="red";
+            return false;
+        }
+    }
+</script>
+</head>
+    <meta charset="UTF-8">
+    <body bgcolor="#faebd7">
+<div style="text-align: center;"/>
+<h1>LOGIN FORM</h1>
+<form action="./login" method="GET" onsubmit="return check()" >
+    <input type="text"  name="name" id="name" placeholder="Enter name"><br><br>
+    <input type="password"  name="password" id="password" placeholder="Enter password"><br><br>
+    <input type="submit" value="login">
+</form>
+</body>
+
+
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>REGISTERATION OF BANK</title>
+</head>
+<div style="text-align: center;">
+<h1>REGISTRATION FORM</h1>
+<body BGCOLOR="#deb887">
+<form  action="./register" method="get" onsubmit="return validate()" >
+    <input type="text" name="name" id="name" placeholder="Enter name"><br>
+    <span id="username" style="color:#FF0000"></span>
+<br>
+    <input type="password" name="password" id="password" placeholder="Enter password"> <br>
+    <span id="pass" style="color:#FF0000"></span>
+    <br>
+    <input type="password" name="re_password" id="re_password" placeholder="Re-Enter password"><br>
+    <span id="re_pass" style="color:#FF0000"></span>
+    <br>
+    <input type="text" name="email" id="email" placeholder="Enter Email"><br>
+    <span id="mail" style="color:#FF0000"></span>
+    <br>
+    <div style="text-align: center;"/>
+    <label for="gender">Select Gender</label>
+    <select name="gender" id="gender">
+        <option value="F">Female</option>
+        <option value="M">Male</option>
+        <option value="O">Others</option><br><br>
+    </select><br>
+    <span id="gen" style="color:#FF0000"></span>
+    <br>
+    <input type="text" name="phone" id="phone" placeholder="Enter number"><br>
+    <span id="mobile" style="color:#FF0000"></span>
+    <br>
+    <input type="text" name="country" id="country" placeholder="Enter country"><br>
+    <span id="count" style="color:#FF0000"></span>
+    <br>
+    <input type="text" name="state" id="state" placeholder="Enter state"><br>
+    <span id="st" style="color:#FF0000"></span>
+    <br>
+    <input type="submit" value="Register">
+</form>
+</body>
+</div>
+    <script type="text/javascript">
+        function validate() {
+            var password=document.getElementById('password').value;
+            var phone=document.getElementById('phone').value;
+            if (document.getElementById('name').value == "") {
+                alert("Name is mandatory");
+                document.getElementById('name').style.borderColor = "red";
+                return false;
+            }
+            else if(password=="")
+            {
+                alert("password field is empty");
+                document.getElementById('password').style.borderColor="red";
+                return false;
+            }
+            else if(password.length<3)
+            {
+                alert("password length must be atleast 3 characters");
+                document.getElementById('password').style.borderColor = "red";
+                return false;
+            }
+            else if(document.getElementById('re_password').value =="")
+            {
+                alert("Confirm password is empty");
+                document.getElementById('re_password').style.borderColor = "red";
+                return false;
+            }
+            else if(document.getElementById('email').value =="")
+            {
+                alert("Email is empty");
+                document.getElementById('email').style.borderColor = "red";
+                return false;
+            }
+            else if(document.getElementById('phone').value =="")
+            {
+                alert("phone is empty");
+                document.getElementById('phone').style.borderColor = "red";
+                return false;
+            }
+            else if(isNaN(phone))
+            {
+                alert("This filed only take digits");
+                document.getElementById('phone').style.borderColor = "red";
+                return false;
+            }
+            else if(document.getElementById('country').value=="")
+            {
+                alert("Country field is empty");
+                document.getElementById('country').style.borderColor = "red";
+                return false;
+            }
+
+            else if(document.getElementById('state').value=="")
+            {
+                alert("State field is empty");
+                document.getElementById('state').style.borderColor = "red";
+                return false;
+            }
+
+
+        }
+
+    </script>
+
+</html>
